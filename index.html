@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Running Baker | Custom Cakes & Catering</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo-container">
+            <span class="logo-main">THE RUNNING BAKER</span>
+            <span class="logo-sub">BY: ANTHONY PADERNILLA</span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#services">Menu & Services</a></li>
+                <li><a href="#booking">Inquire</a></li>
+            </ul>
+        </nav>
+        <a href="#booking" class="btn">Book Catering</a>
+    </header>
+
+    <section class="hero">
+        <div class="hero-text">
+            <h1>Exceptional Food. Unforgettable Bakes.</h1>
+            <p>From custom celebration cakes to full-service savory food catering, we provide delicious, high-quality meals for every occasion.</p>
+            <a href="#services" class="btn">View Our Services</a>
+        </div>
+        <div class="hero-img-container">
+            <img src="cart1.jpg" alt="Catering Food Spread" class="hero-img">
+        </div>
+    </section>
+
+    <section id="services" class="services">
+        <h2>What We Offer</h2>
+        <div class="grid">
+            <div class="card">
+                <div class="card-img-container">
+                    <img src="cater.jpg" alt="Savory Food Trays" class="card-img">
+                </div>
+                <h3>Event Catering</h3>
+                <p>Delicious, home-cooked savory meals and food trays tailored for parties, corporate events, and family gatherings.</p>
+            </div>
+            <div class="card">
+                <div class="card-img-container">
+                    <img src="cake.jpg" alt="Custom Cake" class="card-img">
+                </div>
+                <h3>Custom Cakes</h3>
+                <p>Beautifully designed, personalized cakes for birthdays, weddings, and special milestones.</p>
+            </div>
+            <div class="card">
+                <div class="card-img-container">
+                    <img src="bread.jpg" alt="Fresh Baked Breads" class="card-img">
+                </div>
+                <h3>Artisanal Breads & Pastries</h3>
+                <p>Freshly baked breads, classic pastries, and sweet treats made from scratch daily.</p>
+            </div>
+        </div>
+    </section>
+<section id="about" class="about">
+        <div class="about-img-container">
+            <img src="chef.jpg" alt="Anthony Padernilla - The Running Baker" class="about-img">
+        </div>
+        <div class="about-text">
+            <h2>Meet The Running Baker</h2>
+            <p>What started in 2017 as a passion for baking has grown into a full-service culinary journey. I believe that every great event is anchored by unforgettable food.</p>
+            <p>Whether I am crafting a custom tiered cake for a wedding or preparing savory, home-cooked trays for a corporate lunch, my goal is to deliver quality, flavor, and peace of mind to every single client in Metro Manila.</p>
+            <div class="est-badge">⚓ EST. 2017</div>
+        </div>
+    </section>
+
+    <section id="testimonials" class="testimonials">
+        <h2>What Our Clients Say</h2>
+        <div class="test-grid">
+            <div class="test-card">
+                <div class="stars">★★★★★</div>
+                <p class="test-text">"Anthony catered our family reunion and the food was phenomenal. The savory trays were empty by the end of the night, and everyone was asking for his contact info!"</p>
+                <div class="test-author">— Maria S., Quezon City</div>
+            </div>
+            <div class="test-card">
+                <div class="stars">★★★★★</div>
+                <p class="test-text">"The Running Baker made the most beautiful, moist chocolate cake for my daughter's 18th birthday. The design was exactly what we asked for, and the delivery was perfectly on time."</p>
+                <div class="test-author">— John D., Makati</div>
+            </div>
+            <div class="test-card">
+                <div class="stars">★★★★★</div>
+                <p class="test-text">"Highly professional and easy to work with. We ordered a mix of breads and a full catering spread for a corporate event. Everything was fresh, warm, and delicious."</p>
+                <div class="test-author">— Sarah T., Pasig</div>
+            </div>
+        </div>
+    </section>
+
+<!---(Note: Feel free to change the placeholder names and quotes in the HTML to actual reviews from your Facebook page!)--->
+
+
+
+    <section id="booking" class="booking">
+        <div class="booking-text">
+            <h2>Let's Plan Your Event</h2>
+            <p>Ready to place an order or book us for your next event? Fill out the form to send an inquiry directly to our team. Please include as many details as possible so we can provide an accurate quote.</p>
+            <ul style="list-style: none; margin-top: 1rem;">
+                <li style="margin-bottom: 0.5rem;">⚓ Est. 2017</li>
+                <li style="margin-bottom: 0.5rem;">📍 Metro Manila & Surrounding Areas</li>
+                <li>✉️ Responds within 24-48 hours</li>
+            </ul>
+        </div>
+        
+        <div class="booking-form-container">
+            <h3>Send an Inquiry</h3>
+            
+            <form action="https://formspree.io/f/mgonyqwa" method="POST">
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name" class="form-control" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" class="form-control" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="type">Inquiry Type</label>
+                    <select id="type" name="inquiry_type" class="form-control" required>
+                        <option value="catering">Food Catering</option>
+                        <option value="cake">Custom Cake Order</option>
+                        <option value="bread">Bread/Pastry Bulk Order</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="date">Event Date (If applicable)</label>
+                    <input type="date" id="date" name="event_date" class="form-control">
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Message / Order Details</label>
+                    <textarea id="message" name="message" class="form-control" placeholder="Tell us about your event, guest count, or cake design ideas..." required></textarea>
+                </div>
+
+                <button type="submit" class="btn" style="width: 100%;">Submit Inquiry</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-logo">THE RUNNING BAKER</div>
+        <p>&copy; 2026 The Running Baker by Anthony Padernilla. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

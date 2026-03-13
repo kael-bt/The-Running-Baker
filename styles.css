@@ -1,0 +1,382 @@
+/* --- Color Palette & Variables (Matched to Logo) --- */
+:root {
+    --bg-color: #FFFFFF; /* Crisp White */
+    --text-main: #1A2530; /* Deep Navy Blue from logo */
+    --accent: #1A2530; /* Deep Navy for primary buttons */
+    --accent-hover: #334155; /* Lighter slate for hover states */
+    --bg-light: #F8FAFC; /* Very light cool grey for contrasting sections */
+    --border-color: #E2E8F0;
+}
+
+/* --- Global Styles --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+h1, h2, h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+a {
+    text-decoration: none;
+    color: var(--text-main);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* --- Navigation --- */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 5%;
+    background-color: var(--bg-color);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.logo-container {
+    text-align: center;
+    color: var(--text-main);
+}
+
+.logo-main {
+    font-size: 1.8rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.logo-sub {
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    display: block;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+nav a {
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #64748B;
+}
+
+.btn {
+    background-color: var(--accent);
+    color: #FFFFFF;
+    padding: 1rem 2rem;
+    border-radius: 5px; /* Squared edges for a more structured catering look */
+    font-size: 0.9rem;
+    border: 2px solid var(--accent);
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.btn:hover {
+    background-color: transparent;
+    color: var(--accent);
+}
+
+/* --- Hero Section --- */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 6rem 5%;
+    background-color: var(--bg-light);
+    gap: 4rem;
+}
+
+.hero-text {
+    flex: 1;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin-bottom: 2.5rem;
+    color: #475569;
+}
+
+.hero-img-container {
+    flex: 1;
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+/* --- Services Section (Replaced Menu) --- */
+.services {
+    padding: 6rem 5%;
+    text-align: center;
+}
+
+.services h2 {
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.card {
+    background-color: var(--bg-light);
+    padding: 2rem;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+    text-align: left;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card-img-container {
+    width: 100%;
+    height: 250px;
+    border-radius: 5px;
+    margin-bottom: 1.5rem;
+    overflow: hidden;
+}
+
+.card-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card h3 {
+    font-size: 1.4rem;
+    margin-bottom: 0.8rem;
+}
+
+.card p {
+    font-size: 1rem;
+    color: #475569;
+}
+
+/* --- Booking Section & Form --- */
+.booking {
+    display: flex;
+    gap: 4rem;
+    padding: 6rem 5%;
+    background-color: var(--bg-light);
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+
+.booking-text {
+    flex: 1;
+    min-width: 300px;
+}
+
+.booking-text h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.booking-text p {
+    color: #475569;
+    margin-bottom: 1.5rem;
+}
+
+.booking-form-container {
+    flex: 1;
+    min-width: 350px;
+    background-color: var(--bg-color);
+    padding: 3rem;
+    border-radius: 10px;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.booking-form-container h3 {
+    text-align: center;
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.form-control {
+    width: 100%;
+    padding: 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    font-family: inherit;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.form-control:focus {
+    outline: none;
+    border-color: var(--accent);
+}
+
+textarea.form-control {
+    resize: vertical;
+    min-height: 100px;
+}
+/* --- About The Chef Section --- */
+.about {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+    padding: 6rem 5%;
+    background-color: var(--bg-color);
+    flex-wrap: wrap;
+}
+
+.about-img-container {
+    flex: 1;
+    min-width: 300px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.about-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.about-text {
+    flex: 1.5;
+    min-width: 300px;
+}
+
+.about-text h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.about-text p {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    color: #475569;
+}
+
+.est-badge {
+    display: inline-block;
+    background-color: var(--accent);
+    color: var(--bg-color);
+    padding: 0.5rem 1rem;
+    font-weight: 700;
+    border-radius: 5px;
+    margin-top: 1rem;
+    letter-spacing: 1px;
+}
+
+/* --- Testimonials Section --- */
+.testimonials {
+    padding: 6rem 5%;
+    background-color: var(--bg-light);
+    text-align: center;
+}
+
+.testimonials h2 {
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+}
+
+.test-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.test-card {
+    background-color: var(--bg-color);
+    padding: 2.5rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    text-align: left;
+    position: relative;
+}
+
+.stars {
+    color: #F59E0B; /* Amber/Gold color for stars */
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    letter-spacing: 2px;
+}
+
+.test-text {
+    font-style: italic;
+    font-size: 1.05rem;
+    margin-bottom: 1.5rem;
+    color: #475569;
+}
+
+.test-author {
+    font-weight: 700;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    color: var(--text-main);
+}
+/* --- Footer --- */
+footer {
+    text-align: center;
+    padding: 3rem 5%;
+    background-color: var(--text-main);
+    color: var(--bg-color);
+    font-size: 0.9rem;
+}
+
+.footer-logo {
+    font-size: 1.5rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+}
