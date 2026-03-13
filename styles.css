@@ -380,3 +380,87 @@ footer {
     font-weight: 800;
     margin-bottom: 1rem;
 }
+/* ========================================= */
+/* --- MOBILE RESPONSIVENESS (PHONES & TABLETS) --- */
+/* ========================================= */
+
+@media (max-width: 768px) {
+    
+    /* 1. Header & Navigation Fixes */
+    header {
+        flex-direction: column;
+        padding: 1.5rem 5%;
+        gap: 1.5rem;
+        text-align: center;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    /* 2. Hero Section Adjustments */
+    .hero {
+        flex-direction: column-reverse; /* Puts the image on top of the text on mobile */
+        padding: 4rem 5%;
+        gap: 2rem;
+        text-align: center;
+    }
+
+    .hero h1 {
+        font-size: 2.2rem; /* Smaller, readable title */
+        margin-bottom: 1rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+        margin-bottom: 1.5rem;
+    }
+
+    /* 3. About Section Stacking */
+    .about {
+        flex-direction: column;
+        padding: 4rem 5%;
+        gap: 2rem;
+        text-align: center;
+    }
+
+    /* 4. Section Spacing & Titles */
+    .services, .testimonials, .booking {
+        padding: 4rem 5%;
+    }
+
+    .services h2, .testimonials h2, .booking-text h2, .about-text h2 {
+        font-size: 2rem;
+    }
+
+    /* 5. Booking Section & Form */
+    .booking {
+        flex-direction: column;
+        gap: 2rem;
+        text-align: center;
+    }
+
+    .booking-text ul {
+        text-align: left; /* Keeps the list readable */
+        display: inline-block;
+    }
+
+    .booking-form-container {
+        width: 100%;
+        min-width: unset; /* Removes the strict width constraint */
+        padding: 2rem 1.5rem;
+    }
+
+    /* 6. Make Buttons Easier to Tap */
+    .btn {
+        width: 100%; 
+        text-align: center;
+    }
+
+    /* Keep the header button normal size */
+    header .btn {
+        width: auto;
+    }
+}
